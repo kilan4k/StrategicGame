@@ -139,7 +139,27 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="Country.cpp" />
+    <ClCompile Include="Economy.cpp" />
+    <ClCompile Include="Events.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Military.cpp" />
+    <ClCompile Include="Politics.cpp" />
+    <ClCompile Include="Society.cpp" />
     <ClCompile Include="StrategicGame.cpp" />
+    <ClCompile Include="Technology.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="Country.h" />
+    <ClInclude Include="Economy.h" />
+    <ClInclude Include="Events.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Military.h" />
+    <ClInclude Include="Politics.h" />
+    <ClInclude Include="Society.h" />
+    <ClInclude Include="Technology.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
