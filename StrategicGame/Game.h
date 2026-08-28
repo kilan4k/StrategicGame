@@ -8,8 +8,6 @@ class Game
 {
 private:
 	
-
-
 	std::vector<Country> countries;
 	std::vector<Events> events;
 
