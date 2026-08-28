@@ -153,9 +153,12 @@
   <ItemGroup>
     <ClInclude Include="Console.h" />
     <ClInclude Include="Country.h" />
+    <ClInclude Include="DiplomaticRelations.h" />
     <ClInclude Include="Economy.h" />
     <ClInclude Include="Events.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Government.h" />
+    <ClInclude Include="Ideology.h" />
     <ClInclude Include="Military.h" />
     <ClInclude Include="Politics.h" />
     <ClInclude Include="Society.h" />
