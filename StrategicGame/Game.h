@@ -9,7 +9,8 @@ class Game
 private:
 	
 	std::vector<Country> countries;
-	std::vector<Events> events;
+	std::vector<DiplomaticRelations> diplomaticRelations;
+	std::vector<Events> possibleEvents;
 
 	int playerCountryId;
 	
