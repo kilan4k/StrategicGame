@@ -38,6 +38,6 @@ inline const std::vector<Ideology> ideologies = {
 	{23, "Liberalism"},
 	{24, "Liberal Conservatism"},
 	{25, "Conservatism"},
-	{26, "Right Populism"};
+	{26, "Right Populism"}
 
 };
