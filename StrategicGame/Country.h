@@ -21,13 +21,13 @@ private:
 
 
 public:
-	int getCountryId()const;
-	std::string getCountryName()const;
-	Economy getCountryEconomy()const;
-	Military getCountryMilitary()const;
-	Politics getCountryPolitics()const;
-	Society getCountrySociety()const;
-	Technology getCountryTechnology()const;
+	int getCountryId();
+	std::string& getCountryName();
+	Economy& getCountryEconomy();
+	Military& getCountryMilitary();
+	Politics& getCountryPolitics();
+	Society& getCountrySociety();
+	Technology& getCountryTechnology();
 
 
 };
