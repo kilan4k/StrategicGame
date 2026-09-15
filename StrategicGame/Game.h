@@ -7,7 +7,7 @@
 class Game
 {
 private:
-	
+
 	std::vector<Country> countries;
 	std::vector<DiplomaticRelations> diplomaticRelations;
 	std::vector<Events> possibleEvents;

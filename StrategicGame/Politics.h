@@ -23,7 +23,7 @@ public:
 
 	int getCorruptionRate()const;
 	void setCorruptionRate(int value);
-
+		
 	int getGovernmentApproval()const;
 	void setGovernmentApproval(int value);
 
