@@ -6,6 +6,8 @@
 #include "Society.h"
 #include "Events.h"
 #include "Technology.h"
+#include "Ideology.h"
+#include "Government.h"
 #include <string>
 
 class Console

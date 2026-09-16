@@ -41,3 +41,12 @@ inline const std::vector<Ideology> ideologies = {
 	{26, "Right Populism"}
 
 };
+
+const Ideology* getIdeologyById(int id) {
+	for (const Ideology& ideology : ideologies) {
+		if (ideology.ideologyID == id) {
+			return &ideology;
+		}
+	}
+	return nullptr;
+}

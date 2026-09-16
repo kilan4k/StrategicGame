@@ -14,7 +14,7 @@ void Console::printCountry(const Country& country) {
 }
 void Console::printEconomy(const Economy& economy) {
 	beautifyOutput();
-	cout << "Economy statistics\n";
+	cout << "Economy Menu\n";
 	beautifyOutput();
 	cout << "\tGDP: " << economy.getGdp() << "$\n";
 	cout << "\tBudget: " << economy.getBudget() << "$\n";
@@ -33,13 +33,47 @@ void Console::printEconomy(const Economy& economy) {
 	beautifyOutput();
 }
 void Console::printMilitary(const Military& military) {
+	beautifyOutput();
+	cout << "Military Menu\n";
+	beautifyOutput();
+
+
 
 }
 void Console::printPolitics(const Politics& politics) {
+	const Ideology* ideology = getIdeologyById(politics.getIdeologyId());
+	const Government* government = getGovernmentById(politics.getGovernmentId());
 
-
+	beautifyOutput();
+	cout << "Politics Menu\n";
+	beautifyOutput();
+	if (ideology) {
+		cout << "\tIdeology: " << ideology->ideologyName << "\n";
+	}
+	else {
+		cout << "\tIdeology: " << "Unkown Ideology\n";
+	}
+	if (government) {
+		cout << "\tGovernment type: " << government->governmentName<<"\n";
+	}
+	else {
+		cout << "\tGovernment type: " << "Unkown Government type\n";
+	}
+	cout << "\tStability rate: " << politics.getStability() << "%\n";
+	cout << "\tWar support rate: " << politics.getWarSupport() << "%\n";
+	cout << "\tCorruption rate: " << politics.getCorruptionRate() << "%\n";
+	cout << "\tGovernment approval rate: " << politics.getGovernmentApproval() << "%\n";
+	if (politics.getHasElections()) {
+		cout << "\tGame turns until the next elections: " << politics.getTurnsUntilElections() << "\n";
+	}
+	else {
+		cout << "\tNo elections" << "\n";
+	}
 }
 void Console::printSociety(const Society& society) {
+	beautifyOutput();
+	cout << "Society Menu\n";
+	beautifyOutput();
 
 
 }
