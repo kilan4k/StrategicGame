@@ -144,6 +144,8 @@
     <ClCompile Include="Economy.cpp" />
     <ClCompile Include="Events.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Government.cpp" />
+    <ClCompile Include="Ideology.cpp" />
     <ClCompile Include="Military.cpp" />
     <ClCompile Include="Politics.cpp" />
     <ClCompile Include="Society.cpp" />

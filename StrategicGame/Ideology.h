@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 struct Ideology {
 	int ideologyID;
 	std::string ideologyName;
@@ -42,11 +43,4 @@ inline const std::vector<Ideology> ideologies = {
 
 };
 
-const Ideology* getIdeologyById(int id) {
-	for (const Ideology& ideology : ideologies) {
-		if (ideology.ideologyID == id) {
-			return &ideology;
-		}
-	}
-	return nullptr;
-}
+const Ideology* getIdeologyById(int id);

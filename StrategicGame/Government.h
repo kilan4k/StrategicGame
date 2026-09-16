@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 struct Government {
 	int governmentId;
 	std::string governmentName;
@@ -23,11 +24,4 @@ inline const std::vector<Government> governments = {
 	{13, "Oligarchy"}
 };
 
-const Government* getGovernmentById(int id) {
-	for (const Government& government : governments) {
-		if (government.governmentId == id) {
-			return &government;
-		}
-	}
-	return nullptr;
-}
+const Government* getGovernmentById(int id);
