@@ -74,7 +74,12 @@ void Console::printSociety(const Society& society) {
 	beautifyOutput();
 	cout << "Society Menu\n";
 	beautifyOutput();
-
+	cout << "\tPopulation: " << society.getPopulation() << "\n";
+	cout << "\tPopulation growth: " << society.getPopulationGrowth() << "%\n";
+	cout << "\tMigrants: " << society.getMigrants() << "\n";
+	cout << "\tLiteracy Rate: " << society.getLiteracyRate() << "%\n";
+	cout << "\tInequality Rate: " << society.getInequalityRate() << "%\n";
+	cout << "\tCrime Rate: " << society.getCrimeRate() << "%\n";
 
 }
 void Console::printEvent(const Events& event) { //later
