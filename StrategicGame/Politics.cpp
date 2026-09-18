@@ -1,27 +1,27 @@
 #include "Politics.h"
 
 int Politics::getIdeologyId()const { return ideologyId; }
-void Politics::setIdeologyId(int Id){}
+void Politics::setIdeologyId(int Id) { ideologyId = Id; }
 
 int Politics::getGovernmentId()const { return governmentId; }
-void Politics::setGovernmentId(int Id){}
+void Politics::setGovernmentId(int Id) { governmentId = Id; }
 
 int Politics::getStability()const { return stability; }
-void Politics::setStability(int value){}
+void Politics::setStability(int value) { stability = value; }
 
 int Politics::getCorruptionRate()const { return corruptionRate; }
-void Politics::setCorruptionRate(int value){}
+void Politics::setCorruptionRate(int value) { corruptionRate = value; }
 
 int Politics::getGovernmentApproval()const { return governmentApproval; }
-void Politics::setGovernmentApproval(int value){}
+void Politics::setGovernmentApproval(int value) { governmentApproval = value; }
 
 int Politics::getTurnsUntilElections()const { return turnsUntilElections; }
-void Politics::setTurnsUntilElections(int turns){}
+void Politics::setTurnsUntilElections(int turns) { turnsUntilElections = turns; }
 
 int Politics::getWarSupport()const { return warSupport; }
-void Politics::setWarSupport(int value){}
+void Politics::setWarSupport(int value) { warSupport = value; }
 
 bool Politics::getHasElections()const { return hasElections; }
-void Politics::setHasElections(bool value){}
+void Politics::setHasElections(bool value) { hasElections = value; }
 
 
