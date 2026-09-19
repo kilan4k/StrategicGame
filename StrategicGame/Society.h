@@ -32,8 +32,8 @@ public:
 	float getPopulationGrowth()const;
 	void setPopulationGrowth(float value);
 
-	int getMigrants()const;
-	void setMigrants(int value);
+	long getMigrants()const;
+	void setMigrants(long value);
 
 	short getLiteracyRate()const;
 	void setLiteracyRate(short value);

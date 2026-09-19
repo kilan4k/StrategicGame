@@ -3,7 +3,7 @@
 Society::Society()
 	: nativePopulation(10000000),
 		populationGrowth(0.6f),
-		migrants(),
+		migrants(100000),
 		literacyRate(80),
 		inequalityRate(30),
 		healthcareLevel(70),
@@ -45,8 +45,8 @@ long Society::getTotalPopulation()const {
 float Society::getPopulationGrowth()const { return populationGrowth; }
 void Society::setPopulationGrowth(float value) { populationGrowth = value; }
 
-int Society::getMigrants()const { return migrants; }
-void Society::setMigrants(int value) {
+long Society::getMigrants()const { return migrants; }
+void Society::setMigrants(long value) {
 	if (value >= 0) {
 		migrants = value;
 	}
