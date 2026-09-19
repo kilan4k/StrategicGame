@@ -1,9 +1,9 @@
 #include "Government.h"
 
-const Government* getGovernmentById(int id) {
-	for (const Government& government : governments) {
-		if (government.governmentId == id) {
-			return &government;
+const Government* getGovernmentByEnum(GovernmentType government) {
+	for (const Government& governmentSeek : governments) {
+		if (governmentSeek.government == government) {
+			return &governmentSeek;
 		}
 	}
 	return nullptr;

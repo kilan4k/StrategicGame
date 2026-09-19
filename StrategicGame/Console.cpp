@@ -42,7 +42,7 @@ void Console::printMilitary(const Military& military) {
 }
 void Console::printPolitics(const Politics& politics) {
 	const Ideology* ideology = getIdeologyByEnum(politics.getIdeology());
-	const Government* government = getGovernmentById(politics.getGovernmentId());
+	const Government* government = getGovernmentByEnum(politics.getGovernment());
 
 	beautifyOutput();
 	cout << "Politics Menu\n";

@@ -1,27 +1,44 @@
 #pragma once
 #include <vector>
 #include <string>
+
+enum class GovernmentType{
+	ParliamentRepublic,
+	PresidentRepublic,
+	MixedRepublic,
+	DirectDemocracy,
+	AbsoluteMonarchy,
+	ConstitutionalMonarchy,
+	ElectiveMonarchy,
+	PresidentialAutocracy,
+	MilitaryJunta,
+	Technocracy,
+	SinglePartyState,
+	Theocracy,
+	Oligarcy
+};
+
 struct Government {
-	int governmentId;
+	GovernmentType government;
 	std::string governmentName;
 };
 inline const std::vector<Government> governments = {
 	//Democratic governments
-	{1, "Parliament Republic"},
-	{2, "President Republic"},
-	{3, "Mixed Republic"},
-	{4, "Direct Democracy"},
+	{GovernmentType::ParliamentRepublic, "Parliament Republic"},
+	{GovernmentType::PresidentRepublic, "President Republic"},
+	{GovernmentType::MixedRepublic, "Mixed Republic"},
+	{GovernmentType::DirectDemocracy, "Direct Democracy"},
 	//Monarchies
-	{5, "Absolute Monarchy"},
-	{6, "Consitutional Monarchy"},
-	{7, "Elective Monarchy"},
+	{GovernmentType::AbsoluteMonarchy, "Absolute Monarchy"},
+	{GovernmentType::ConstitutionalMonarchy, "Consitutional Monarchy"},
+	{GovernmentType::ElectiveMonarchy, "Elective Monarchy"},
 	//Authoritarian governments
-	{8, "Presidental Autocracy"},
-	{9, "Military Junta"},
-	{10, "Technocracy"},
-	{11, "Single Party State"},
-	{12, "Theocracy"},
-	{13, "Oligarchy"}
+	{GovernmentType::PresidentialAutocracy, "Presidental Autocracy"},
+	{GovernmentType::MilitaryJunta, "Military Junta"},
+	{GovernmentType::Technocracy, "Technocracy"},
+	{GovernmentType::SinglePartyState, "Single Party State"},
+	{GovernmentType::Theocracy, "Theocracy"},
+	{GovernmentType::Oligarcy, "Oligarchy"}
 };
 
-const Government* getGovernmentById(int id);
+const Government* getGovernmentByEnum(GovernmentType government);

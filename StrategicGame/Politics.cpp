@@ -3,8 +3,8 @@
 IdeologyType Politics::getIdeology()const { return ideology; }
 void Politics::setIdeology(IdeologyType value) { ideology = value; }
 
-int Politics::getGovernmentId()const { return governmentId; }
-void Politics::setGovernmentId(int Id) { governmentId = Id; }
+GovernmentType Politics::getGovernment()const { return government; }
+void Politics::setGovernment(GovernmentType value) { government = value; }
 
 int Politics::getStability()const { return stability; }
 void Politics::setStability(int value) { stability = value; }
