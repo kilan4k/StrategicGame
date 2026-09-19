@@ -41,7 +41,7 @@ void Console::printMilitary(const Military& military) {
 
 }
 void Console::printPolitics(const Politics& politics) {
-	const Ideology* ideology = getIdeologyById(politics.getIdeologyId());
+	const Ideology* ideology = getIdeologyByEnum(politics.getIdeology());
 	const Government* government = getGovernmentById(politics.getGovernmentId());
 
 	beautifyOutput();

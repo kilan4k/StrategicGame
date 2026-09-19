@@ -1,46 +1,76 @@
 #pragma once
 #include <vector>
 #include <string>
+
+enum class IdeologyType{
+	MarxismLeninism,
+	Juche,
+	Stalinism,
+	Titoism,
+	Fascism,
+	NationalConservatism,
+	Nationalism,
+	Oligarchism,
+	AnarchoCommunism,
+	AnarchoSyndicalism,
+	LibertarianSocialism,
+	AnarchoCapitalism,
+	Minarchism,
+	Libertarianism,
+	DemocraticSocialism,
+	SocialDemocracy,
+	Progressivism,
+	LeftPopulism,
+	EcoSocialism,
+	ThirdWay,
+	Centrism,
+	ChristianDemocracy,
+	Liberalism,
+	LiberalConservatism,
+	Conservatism,
+	RightPopulism
+};
+
 struct Ideology {
-	int ideologyID;
+	IdeologyType ideology;
 	std::string ideologyName;
 
 };
 inline const std::vector<Ideology> ideologies = {
 	//Left Authoritarian
-	{1, "Marxism-Leninism"},
-	{2, "Juche"},
-	{3, "Stalinism"},
-	{4, "Titoism"},
+	{IdeologyType::MarxismLeninism, "Marxism-Leninism"},
+	{IdeologyType::Juche, "Juche"},
+	{IdeologyType::Stalinism, "Stalinism"},
+	{IdeologyType::Titoism, "Titoism"},
 	//Right Authoritarian
-	{5, "Fascism"},
-	{6, "National Conservatism"},
-	{7, "Nationalism"},
-	{8, "Oligarchism"},
+	{IdeologyType::Fascism, "Fascism"},
+	{IdeologyType::NationalConservatism, "National Conservatism"},
+	{IdeologyType::Nationalism, "Nationalism"},
+	{IdeologyType::Oligarchism, "Oligarchism"},
 	//Left Libertarian
-	{9, "Anarcho-Communism"},
-	{10, "Anarcho-Syndicalism"},
-	{11, "Libertarian Socialism"},
+	{IdeologyType::AnarchoCommunism, "Anarcho-Communism"},
+	{IdeologyType::AnarchoSyndicalism, "Anarcho-Syndicalism"},
+	{IdeologyType::LibertarianSocialism, "Libertarian Socialism"},
 	//Right Libertarian
-	{12, "Anarcho-Capitalism"},
-	{13, "Minarchism"},
-	{14, "Libertarianism"},
+	{IdeologyType::AnarchoCapitalism, "Anarcho-Capitalism"},
+	{IdeologyType::Minarchism, "Minarchism"},
+	{IdeologyType::Libertarianism, "Libertarianism"},
 	//Left Center
-	{15, "Democratic Socialism"},
-	{16, "Social Democracy"},
-	{17, "Progressivism"},
-	{18, "Left Populism"},
-	{19, "Eco-Socialism"},
+	{IdeologyType::DemocraticSocialism, "Democratic Socialism"},
+	{IdeologyType::SocialDemocracy, "Social Democracy"},
+	{IdeologyType::Progressivism, "Progressivism"},
+	{IdeologyType::LeftPopulism, "Left Populism"},
+	{IdeologyType::EcoSocialism, "Eco-Socialism"},
 	//Center
-	{20, "Third Way"},
-	{22, "Centrism"},
+	{IdeologyType::ThirdWay, "Third Way"},
+	{IdeologyType::Centrism, "Centrism"},
 	//Right Center
-	{21, "Christian Democracy"},
-	{23, "Liberalism"},
-	{24, "Liberal Conservatism"},
-	{25, "Conservatism"},
-	{26, "Right Populism"}
+	{IdeologyType::ChristianDemocracy, "Christian Democracy"},
+	{IdeologyType::Liberalism, "Liberalism"},
+	{IdeologyType::LiberalConservatism, "Liberal Conservatism"},
+	{IdeologyType::Conservatism, "Conservatism"},
+	{IdeologyType::RightPopulism, "Right Populism"}
 
 };
 
-const Ideology* getIdeologyById(int id);
+const Ideology* getIdeologyByEnum(IdeologyType ideology);

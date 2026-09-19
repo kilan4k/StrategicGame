@@ -1,8 +1,9 @@
 #pragma once
+#include "Ideology.h"
 class Politics
 {
 private:
-	int ideologyId;
+	IdeologyType ideology;
 	int governmentId;
 	int stability;
 	int corruptionRate;
@@ -12,8 +13,11 @@ private:
 	int warSupport;
 	bool hasElections;
 public:
-	int getIdeologyId()const;
-	void setIdeologyId(int Id);
+
+
+
+	IdeologyType getIdeology()const;
+	void setIdeology(IdeologyType value);
 
 	int getGovernmentId()const;
 	void setGovernmentId(int Id);

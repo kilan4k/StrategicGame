@@ -1,7 +1,7 @@
 #include "Politics.h"
 
-int Politics::getIdeologyId()const { return ideologyId; }
-void Politics::setIdeologyId(int Id) { ideologyId = Id; }
+IdeologyType Politics::getIdeology()const { return ideology; }
+void Politics::setIdeology(IdeologyType value) { ideology = value; }
 
 int Politics::getGovernmentId()const { return governmentId; }
 void Politics::setGovernmentId(int Id) { governmentId = Id; }
