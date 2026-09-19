@@ -1,14 +1,45 @@
 #include "Society.h"
 
+Society::Society()
+	: nativePopulation(10000000),
+		populationGrowth(0.6f),
+		migrants(),
+		literacyRate(80),
+		inequalityRate(30),
+		healthcareLevel(70),
+		crimeRate(30)
+{}
+Society::Society(
+	long nativePopulation,
+	float populationGrowth,
+	long migrants,
 
-long Society::getPopulation()const { return population; }
-void Society::setPopulation(long value) {
+	short literacyRate,
+	short inequalityRate,
+	short healthcareLevel,
+	short crimeRate)
+
+	:nativePopulation(nativePopulation),
+	populationGrowth (populationGrowth),
+	migrants (migrants),
+	literacyRate (literacyRate),
+	inequalityRate (inequalityRate),
+	healthcareLevel (healthcareLevel),
+	crimeRate (crimeRate)
+{}
+
+long Society::getNativePopulation()const { return nativePopulation; }
+void Society::setNativePopulation(long value) {
 	if (value > 0) {
-		population = value;
+		nativePopulation = value;
 	}
 	else {
-		population = 0;
+		nativePopulation = 0;
 	}
+}
+
+long Society::getTotalPopulation()const {
+	return nativePopulation + migrants;
 }
 
 float Society::getPopulationGrowth()const { return populationGrowth; }

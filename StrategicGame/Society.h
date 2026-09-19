@@ -2,9 +2,9 @@
 class Society
 {
 private:
-	long population;
+	long nativePopulation;
 	float populationGrowth;
-	int migrants;
+	long migrants;
 
 	short literacyRate;
 	short inequalityRate;
@@ -13,8 +13,21 @@ private:
 
 
 public:
-	long getPopulation()const;
-	void setPopulation(long value);
+	Society();
+	Society(
+	long nativePopulation,
+	float populationGrowth,
+	long migrants,
+
+	short literacyRate,
+	short inequalityRate,
+	short healthcareLevel,
+	short crimeRate);
+
+	long getNativePopulation()const;
+	void setNativePopulation(long value);
+
+	long getTotalPopulation()const;
 
 	float getPopulationGrowth()const;
 	void setPopulationGrowth(float value);

@@ -14,7 +14,9 @@ private:
 
 	int playerCountryId;
 	
+	
 public:
+
 
 	std::vector<Country> getCountries();
 

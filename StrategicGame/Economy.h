@@ -22,6 +22,12 @@ private:
 
 
 public:
+	Economy();
+	Economy(
+	long long gdp, double economicGrowthRate,double inflationRate, double keyRate,
+	short unemploymentRate,
+	long long budget, long long taxRevenue, long long governmentSpending,
+	short socialSpendingPerc, short militarySpendingPerc, short educationSpendingPerc, short healthcareSpendingPerc);
 	long long getGdp()const;
 	void increaseGdp(int amount);
 	void decreaseGdp(int amount);

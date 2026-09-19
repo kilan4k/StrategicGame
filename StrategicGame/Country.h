@@ -21,6 +21,7 @@ private:
 
 
 public:
+	Country();
 	int getCountryId();
 	std::string& getCountryName();
 	Economy& getCountryEconomy();
