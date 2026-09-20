@@ -9,7 +9,7 @@ private:
 	
 	std::unordered_map<UnitType, int> units;
 
-
+	
 public:
 	int getManpower()const;
 	void addManpower(int amount);
