@@ -1,18 +1,13 @@
 #pragma once
-#include <vector>
+#include <unordered_map>
 #include "ArmyUnit.h"
-struct MilitaryUnits {
-	UnitType unitType;
-	int amount;
-};
 
 class Military
 {
 private:
 	int manpower;	
-	std::vector<MilitaryUnits> units = {
 	
-	};
+	std::unordered_map<UnitType, int> units;
 
 
 public:
