@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
-
+#include "ArmyUnit.h"
 struct MilitaryUnits {
-	int unitId;
+	UnitType unitType;
 	int amount;
 };
 
@@ -20,9 +20,9 @@ public:
 	void addManpower(int amount);
 	void reduceManpower(int amount);
 
-	MilitaryUnits getUnit(int Id)const;
-	void addUnit(int Id, int amount);
-	void removeUnit(int Id, int amount);
+	int getUnitAmount(UnitType type)const;
+	void addUnit(UnitType type, int amount);
+	void removeUnit(UnitType type, int amount);
 
 
 

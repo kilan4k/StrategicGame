@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArmyUnit.cpp" />
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="Country.cpp" />
     <ClCompile Include="Economy.cpp" />

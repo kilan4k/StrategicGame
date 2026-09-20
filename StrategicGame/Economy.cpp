@@ -8,10 +8,10 @@ Economy::Economy()
 	budget(50000),
 	taxRevenue(25000),
 	governmentSpending(400000),
-	socialSpendingPerc(200000),
-	militarySpendingPerc(10000),
-	educationSpendingPerc(5000),
-	healthcareSpendingPerc(5000)
+	socialSpendingPerc(50),
+	militarySpendingPerc(20),
+	educationSpendingPerc(15),
+	healthcareSpendingPerc(15)
 {}
 Economy::Economy(
 	long long gdp, double economicGrowthRate, double inflationRate, double keyRate,

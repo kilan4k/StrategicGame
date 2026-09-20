@@ -74,7 +74,7 @@ void Console::printSociety(const Society& society) {
 	beautifyOutput();
 	cout << "Society Menu\n";
 	beautifyOutput();
-	cout << "\Population: " << society.getTotalPopulation() << "\n";
+	cout << "\tPopulation: " << society.getTotalPopulation() << "\n";
 	cout << "\tPopulation growth: " << society.getPopulationGrowth() << "%\n";
 	cout << "\tMigrants: " << society.getMigrants() << "\n";
 	cout << "\tLiteracy Rate: " << society.getLiteracyRate() << "%\n";
