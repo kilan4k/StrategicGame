@@ -20,6 +20,7 @@ public:
 	void printCountry(const Country& country);
 	void printEconomy(const Economy& economy);
 	void printMilitary(const Military& military);
+	void printArmyUnitStats();
 	void printPolitics(const Politics& politics);
 	void printSociety(const Society& society);
 	void printEvent(const Events& event);

@@ -45,6 +45,34 @@ void Console::printMilitary(const Military& military) {
 	}
 	beautifyOutput();
 }
+void Console::printArmyUnitStats() {
+	beautifyOutput();
+	cout << "Military Units' stats\n";
+	beautifyOutput();
+	cout << "\n";
+	for (const auto& unit : UnitStats) {
+		cout << "\t" << unit.name << ":\n";
+		cout << "\t\t" << "HP: " << unit.hp << "\n";
+		cout << "\t\t" << "Soft attack: " << unit.softAttack << "\n";
+		cout << "\t\t" << "Hard attack: " << unit.hardAttack << "\n";
+		cout << "\t\t" << "Anti air Attack: " << unit.antiAirAttack << "\n";
+		cout << "\t\t" << "Mobility: " << unit.mobility << "\n";
+		cout << "\t\t" << "Manpower required: " << unit.manpowerRequired << "\n";
+		if (unit.canShootHighAir) {
+			cout << "\t\t" << "This Unit has ability to shoot down high flying targets" << "\n";
+		}
+		if (unit.isArmored) {
+			cout << "\t\t" << "This Unit is Armored" << "\n";
+		}
+		if (unit.isHighAir) {
+			cout << "\t\t" << "This flies high" << "\n";
+		}
+		else if (unit.isAir) {
+			cout << "\t\t" << "This Unit flies low" << "\n";
+		}
+		beautifyOutput();
+	}
+}
 void Console::printPolitics(const Politics& politics) {
 	const Ideology* ideology = getIdeologyByEnum(politics.getIdeology());
 	const Government* government = getGovernmentByEnum(politics.getGovernment());
