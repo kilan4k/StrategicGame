@@ -4,7 +4,7 @@
 #include <vector>
 enum class UnitType {
 	Soldier,
-	SpeicalOpsSoldier,
+	SpecialOpsSoldier,
 	MBT,
 	IFV,
 	APC,

@@ -10,10 +10,10 @@ const ArmyUnit* getUnitByEnum(UnitType unitTypeS) {
 }
 const std::array<ArmyUnit, UNIT_COUNT> UnitStats{
 	ArmyUnit{UnitType::Soldier, "Soldier", 1,  5, 2.5f, 1.5f, 0.5f, 14, 1, false},
-	ArmyUnit{UnitType::SpeicalOpsSoldier, "Special Ops Soldier", 10,  10, 5.0f, 5.0f, 5.0f, 20, 1, false},
+	ArmyUnit{UnitType::SpecialOpsSoldier, "Special Ops Soldier", 10,  10, 5.0f, 5.0f, 5.0f, 20, 1, false},
 	ArmyUnit{UnitType::MBT, "Main Battle Tank", 150, 75, 25.0f, 50.0f, 1.0f, 2, 4, false, true},
 	ArmyUnit{UnitType::IFV, "Infantry Fighting Vehicle", 75, 35, 25.0f, 35.0f, 5.0f, 6, 4, false, true},
-	ArmyUnit{UnitType::APC, "Armored Personeel Carrier", 45, 20, 15.0f, 10.0f, 5.0f, 10, 3, false, true},
+	ArmyUnit{UnitType::APC, "Armored Personnel Carrier", 45, 20, 15.0f, 10.0f, 5.0f, 10, 3, false, true},
 	ArmyUnit{UnitType::AttackHeli, "Attack Helicopter", 250, 50,  50.0f, 35.0f, 35.0f, 15, 5, false, false, true, false},
 	ArmyUnit{UnitType::FighterJet, "Fighter Jet", 700, 70,  20.0f, 10.0f, 75.0f, 35, 5, true, false, true, true},
 	ArmyUnit{UnitType::AttackerJet, "Attacker Jet", 750, 65,  50.0f, 20.0f, 25.0f, 20, 5, true, false, true, true},

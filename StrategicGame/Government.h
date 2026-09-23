@@ -15,7 +15,7 @@ enum class GovernmentType{
 	Technocracy,
 	SinglePartyState,
 	Theocracy,
-	Oligarcy
+	Oligarchy
 };
 
 struct Government {
@@ -30,15 +30,15 @@ inline const std::vector<Government> governments = {
 	{GovernmentType::DirectDemocracy, "Direct Democracy"},
 	//Monarchies
 	{GovernmentType::AbsoluteMonarchy, "Absolute Monarchy"},
-	{GovernmentType::ConstitutionalMonarchy, "Consitutional Monarchy"},
+	{GovernmentType::ConstitutionalMonarchy, "Constitutional Monarchy"},
 	{GovernmentType::ElectiveMonarchy, "Elective Monarchy"},
 	//Authoritarian governments
-	{GovernmentType::PresidentialAutocracy, "Presidental Autocracy"},
+	{GovernmentType::PresidentialAutocracy, "Presidential Autocracy"},
 	{GovernmentType::MilitaryJunta, "Military Junta"},
 	{GovernmentType::Technocracy, "Technocracy"},
 	{GovernmentType::SinglePartyState, "Single Party State"},
 	{GovernmentType::Theocracy, "Theocracy"},
-	{GovernmentType::Oligarcy, "Oligarchy"}
+	{GovernmentType::Oligarchy, "Oligarchy"}
 };
 
 const Government* getGovernmentByEnum(GovernmentType government);
