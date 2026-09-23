@@ -13,9 +13,9 @@ void Console::printCountry(const Country& country) {
 	cout << "|Country statistics\n";
 	beautifyOutput();
 
-	cout << "|\tCountry ID: "<<country.getCountryId()<<"\n";
-	cout << "|\tCountry name: " << country.getCountryName()<<"\n";
-	beautifyOutput();
+	cout << "|   Country ID: "<<country.getCountryId()<<"\n";
+	cout << "|   Country name: " << country.getCountryName()<<"\n|\n";
+
 	cout << "|   "; printEconomy(country.getCountryEconomy());
 	cout << "|   "; printMilitary(country.getCountryMilitary());
 	cout << "|   "; printPolitics(country.getCountryPolitics());
@@ -26,13 +26,13 @@ void Console::printEconomy(const Economy& economy) {
 	beautifyOutput();
 	cout << "|\tGDP: " << economy.getGdp() << "$\n";
 	cout << "|\tBudget: " << economy.getBudget() << "$\n";
-	cout << "|\tTax revenue: " << economy.getTaxRevenue() << "$\n";
-	beautifyOutput();
+	cout << "|\tTax revenue: " << economy.getTaxRevenue() << "$\n|\n";
+	
 	cout << "|\tEconomic growth rate: " << economy.getEconomicGrowthRate() << "%\n";
 	cout << "|\tInflation rate: " << economy.getInflationRate() << "%\n";
 	cout << "|\tKey rate: " << economy.getKeyRate() << "%\n";
-	cout << "|\tUnemployment rate: " << economy.getUnemploymentRate() << "%\n";
-	beautifyOutput();
+	cout << "|\tUnemployment rate: " << economy.getUnemploymentRate() << "%\n|\n";
+
 	cout << "|\tGovernment spending: " << economy.getGovernmentSpending() << "$\n";
 	cout << "|\tSocial spending: " << economy.getSocialSpendingPerc() << "%\n";
 	cout << "|\tMilitary spending: " << economy.getMilitarySpendingPerc() << "%\n";
@@ -91,12 +91,12 @@ void Console::printPolitics(const Politics& politics) {
 		cout << "|\tIdeology: " << "Unkown Ideology\n";
 	}
 	if (government) {
-		cout << "|\tGovernment type: " << government->governmentName << "\n";
+		cout << "|\tGovernment type: " << government->governmentName << "\n|\n";
 	}
 	else {
-		cout << "|\tGovernment type: " << "Unknown Government type\n";
+		cout << "|\tGovernment type: " << "Unknown Government type\n|\n";
 	}
-	beautifyOutput();
+
 	cout << "|\tStability rate: " << politics.getStability() << "%\n";
 	cout << "|\tWar support rate: " << politics.getWarSupport() << "%\n";
 	cout << "|\tCorruption rate: " << politics.getCorruptionRate() << "%\n";
@@ -114,8 +114,8 @@ void Console::printSociety(const Society& society) {
 	beautifyOutput();
 	cout << "|\tPopulation: " << society.getTotalPopulation() << "\n";
 	cout << "|\tPopulation growth: " << society.getPopulationGrowth() << "%\n";
-	cout << "|\tMigrants: " << society.getMigrants() << "\n";
-	beautifyOutput();
+	cout << "|\tMigrants: " << society.getMigrants() << "\n|\n";
+
 	cout << "|\tLiteracy Rate: " << society.getLiteracyRate() << "%\n";
 	cout << "|\tInequality Rate: " << society.getInequalityRate() << "%\n";
 	cout << "|\tCrime Rate: " << society.getCrimeRate() << "%\n";
