@@ -9,13 +9,20 @@ void Console::beautifyOutput() {
 	cout << "--------------------------------------------------------------------------------\n";
 }
 void Console::printCountry(const Country& country) {
-	
+	beautifyOutput();
+	cout << "Country statistics\n";
+	beautifyOutput();
 
-
+	cout << "\tCountry ID: "<<country.getCountryId()<<"\n";
+	cout << "\tCountry name: " << country.getCountryName()<<"\n";
+	beautifyOutput();
+	cout << "   "; printEconomy(country.getCountryEconomy());
+	cout << "   "; printMilitary(country.getCountryMilitary());
+	cout << "   "; printPolitics(country.getCountryPolitics());
+	cout << "   "; printSociety(country.getCountrySociety());
 }
 void Console::printEconomy(const Economy& economy) {
-	beautifyOutput();
-	cout << "Economy Menu\n";
+	cout << "Economy statistics\n";
 	beautifyOutput();
 	cout << "\tGDP: " << economy.getGdp() << "$\n";
 	cout << "\tBudget: " << economy.getBudget() << "$\n";
@@ -34,8 +41,7 @@ void Console::printEconomy(const Economy& economy) {
 	beautifyOutput();
 }
 void Console::printMilitary(const Military& military) {
-	beautifyOutput();
-	cout << "Military Menu\n";
+	cout << "Military statistics\n";
 	beautifyOutput();
 	cout << "\tManpower: " << military.getManpower() << "\n\n";
 	for (const auto& unit : UnitStats) {
@@ -46,13 +52,13 @@ void Console::printMilitary(const Military& military) {
 	beautifyOutput();
 }
 void Console::printArmyUnitStats() {
-	beautifyOutput();
-	cout << "Military Units' stats\n";
+	cout << "Military Units' statistics\n";
 	beautifyOutput();
 	cout << "\n";
 	for (const auto& unit : UnitStats) {
 		cout << "\t" << unit.name << ":\n";
 		cout << "\t\t" << "HP: " << unit.hp << "\n";
+		cout << "\t\t" << "Production cost: " << unit.productionCost<< "\n";
 		cout << "\t\t" << "Soft attack: " << unit.softAttack << "\n";
 		cout << "\t\t" << "Hard attack: " << unit.hardAttack << "\n";
 		cout << "\t\t" << "Anti air Attack: " << unit.antiAirAttack << "\n";
@@ -65,7 +71,7 @@ void Console::printArmyUnitStats() {
 			cout << "\t\t" << "This Unit is Armored" << "\n";
 		}
 		if (unit.isHighAir) {
-			cout << "\t\t" << "This flies high" << "\n";
+			cout << "\t\t" << "This Unit flies high" << "\n";
 		}
 		else if (unit.isAir) {
 			cout << "\t\t" << "This Unit flies low" << "\n";
@@ -76,9 +82,7 @@ void Console::printArmyUnitStats() {
 void Console::printPolitics(const Politics& politics) {
 	const Ideology* ideology = getIdeologyByEnum(politics.getIdeology());
 	const Government* government = getGovernmentByEnum(politics.getGovernment());
-
-	beautifyOutput();
-	cout << "Politics Menu\n";
+	cout << "Politics statistics\n";
 	beautifyOutput();
 	if (ideology) {
 		cout << "\tIdeology: " << ideology->ideologyName << "\n";
@@ -106,8 +110,7 @@ void Console::printPolitics(const Politics& politics) {
 	beautifyOutput();
 }
 void Console::printSociety(const Society& society) {
-	beautifyOutput();
-	cout << "Society Menu\n";
+	cout << "Society statistics\n";
 	beautifyOutput();
 	cout << "\tPopulation: " << society.getTotalPopulation() << "\n";
 	cout << "\tPopulation growth: " << society.getPopulationGrowth() << "%\n";

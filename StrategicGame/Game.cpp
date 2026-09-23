@@ -11,7 +11,5 @@ void Game::play() {
 		Society(140000000, -0.4f, 6000000, 75, 42, 43, 41),
 		Technology()
 		);
-	console.printEconomy(Russia.getCountryEconomy());
-	console.printMilitary(Russia.getCountryMilitary());
-	console.printArmyUnitStats();
+	console.printCountry(Russia);
 }
