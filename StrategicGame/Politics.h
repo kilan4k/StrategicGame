@@ -14,8 +14,8 @@ private:
 	int warSupport;
 	bool hasElections;
 public:
-
-
+	Politics();
+	Politics(IdeologyType ideology, GovernmentType government, int stability, int corruptionRate, int governmentApproval, int turnsUntilElections,int warSupport, bool hasElections);
 
 	IdeologyType getIdeology()const;
 	void setIdeology(IdeologyType value);

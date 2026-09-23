@@ -1,5 +1,17 @@
 #include "Politics.h"
 
+Politics::Politics(){}
+Politics::Politics(IdeologyType ideology, GovernmentType government, int stability, int corruptionRate, int governmentApproval, int turnsUntilElections, int warSupport, bool hasElections)
+	:ideology(ideology), 
+	government(government), 
+	stability(stability), 
+	corruptionRate(corruptionRate), 
+	governmentApproval(governmentApproval), 
+	turnsUntilElections(turnsUntilElections), 
+	warSupport(warSupport),
+	hasElections(hasElections)
+{}
+
 IdeologyType Politics::getIdeology()const { return ideology; }
 void Politics::setIdeology(IdeologyType value) { ideology = value; }
 
