@@ -6,7 +6,7 @@ void Console::printMessage(std::string message){
 	cout << message;
 }
 void Console::beautifyOutput() {
-	cout << "--------------------\n";
+	cout << "--------------------------------------------------------------------------------\n";
 }
 void Console::printCountry(const Country& country) {
 	

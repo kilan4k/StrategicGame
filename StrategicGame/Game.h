@@ -17,7 +17,7 @@ private:
 	
 public:
 
-
+	void play();
 	std::vector<Country> getCountries();
 
 

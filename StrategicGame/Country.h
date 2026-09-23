@@ -14,7 +14,7 @@ private:
 	Economy economy;
 	Military military;
 	Politics politics;
-	Society population;
+	Society society;
 	Technology technology;
 
 
@@ -22,13 +22,22 @@ private:
 
 public:
 	Country();
-	int getCountryId();
-	std::string& getCountryName();
-	Economy& getCountryEconomy();
-	Military& getCountryMilitary();
-	Politics& getCountryPolitics();
-	Society& getCountrySociety();
-	Technology& getCountryTechnology();
+	Country(
+		int countryId,
+		std::string name,
+		Economy economy,
+		Military military,
+		Politics politics,
+		Society society,
+		Technology technology
+	);
+	const int getCountryId()const;
+	const std::string& getCountryName()const;
+	const Economy& getCountryEconomy()const;
+	const Military& getCountryMilitary()const;
+	const Politics& getCountryPolitics()const;
+	const Society& getCountrySociety()const;
+	const Technology& getCountryTechnology()const;
 
 
 };
