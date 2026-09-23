@@ -11,6 +11,8 @@ private:
 
 	
 public:
+	Military();
+	Military(int manpower, int soldiers, int tanks, int fighters);
 	int getManpower()const;
 	void addManpower(int amount);
 	void reduceManpower(int amount);

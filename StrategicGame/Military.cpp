@@ -1,5 +1,14 @@
 #include "Military.h"
 
+Military::Military() {}
+Military::Military(int manpower, int soldiers, int tanks, int fighters) 
+: manpower(manpower)
+{
+	addUnit(UnitType::Soldier, soldiers);
+	addUnit(UnitType::MBT, tanks);
+	addUnit(UnitType::FighterJet, fighters);
+}
+
 int Military::getManpower()const { return manpower; }
 void Military::addManpower(int amount) { manpower += amount; }
 void Military::reduceManpower(int amount) { manpower -= (manpower-amount)>0 ?amount : 0; }
